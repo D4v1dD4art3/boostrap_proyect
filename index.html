@@ -11,34 +11,34 @@
 
     <title>platzi | Hawaii</title>
   </head>
-  <body>
+  <body data-spy="scroll" data-target="#navbar" data-offset="57">
 <!-- Header -->
-<nav id="header" class="navbar navbar-expand-lg navbar-dark bg-dark">
+<nav id="header" class="navbar navbar-expand-lg navbar-dark bg-dark sticky-top">
   <div class="container">
     <a class="navbar-brand" href="#">
       <img src="./assets/images/platzi-logo.png" alt="platzi-logo">
       | Conf Hawaii
     </a>
-    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbar" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
       <span class="navbar-toggler-icon"></span>
     </button>
   
-    <div class="collapse navbar-collapse" id="navbarSupportedContent">
+    <div class="collapse navbar-collapse" id="navbar">
       <ul class="navbar-nav ml-auto">
-        <li class="nav-item active">
-          <a class="nav-link" href="#">La conferencia</a>
+        <li class="nav-item">
+          <a class="nav-link" href="#main">La conferencia</a>
         </li>
         <li class="nav-item">
-          <a class="nav-link" href="#">Oradores</a>
+          <a class="nav-link" href="#speakers">Oradores</a>
         </li>
         <li class="nav-item">
-          <a class="nav-link" href="#">Lugar y fecha</a>
+          <a class="nav-link" href="#place-time">Lugar y fecha</a>
         </li>
         <li class="nav-item">
-          <a class="nav-link" href="#">Conviertete en Orador</a>
+          <a class="nav-link" href="#conviertete-en-orador">Conviertete en Orador</a>
         </li>
         <li class="nav-item">
-          <a class="nav-link text-platzi" href="#">Compra de tickets</a>
+          <a class="nav-link text-platzi" data-toggle="modal" data-target="#exampleModal" href="#">Compra de tickets</a>
         </li>
         
       </ul>
@@ -78,7 +78,7 @@
                   Platzi conf llega por primera vez a Hawaii! un evento para compartir con nuestra comunidad el conocimento de nuestros expertos que estan haciendo el fututro de la internet. Ven a concer miembros del Team Platzi asi como oradores y estudiantes del primer nivel que tenemos para ti. Te esperamos!
                 </p>
                 <a href="#" class="btn btn-outline-light"> Quiero ser Orador</a>
-                <button type="button" class="btn btn-success btn-platzi">Comprar Tickets</button>
+                <button type="button" class="btn btn-success btn-platzi " data-toggle="modal" data-target="#exampleModal" >Comprar Tickets</button>
               </div>
             </div>
           </div>
@@ -98,6 +98,7 @@
       </div>
     </div>
     <div class="row">
+
       <div class=" col-12 col-md-6 col-lg-3 my-6">
         <div class="card">
           <img src="./assets/speakers/leonidas2.jpeg" class="card-img-top" alt="Speaker">
@@ -116,14 +117,13 @@
         <div class="card">
           <img src="./assets/speakers/jhon.jpeg" class="card-img-top" alt="Speaker">
           <div class="card-body">
-            <h5 class="card-title">Jonathan Duarte</h5>
+            <h5 class="card-title" data-toggle="tooltip" title="Esa nube parece un arrow function" data-placement="bottom">Jonathan Duarte</h5>
             <div class="badges mb-3 text-right">
               <span class="badge badge-pill badge-warning p-2">AngularJs</span>
               <span class="badge badge-pill badge-dark p-2">Full-stack</span>
               <span class="badge badge-pill badge-danger p-2">Rubi</span>
             </div>
             <p class="card-text">Este Coder-Pro mas conocido como el Barto, te hackea sino le pagas lo que el te pide. puede generar codigo incluso cuando esta durmiendo
-              es amante de las bolas anti-stress 😏
             </p>
             <a href="#" class="btn btn-primary">Go somewhere</a>
           </div>
@@ -162,6 +162,70 @@
 </section>
 <!-- Speakers -->
 
+<!-- Lugar y fecha -->
+<section id="place-time">
+  <div class="container-fluid">
+    <div class="row">
+      <div class="col- col-lg-6 px-0">
+       <img src="./assets/images/honolulu.jpg" alt="honolulu">
+      </div>
+      <div class="col- col-lg-6 pt-4 align-self-center">
+        <h2 >Honolulu - Octubre 2025</h2>
+        <p>Honolulu (/ˌhɒnəˈluːluː/; Hawaiian: [honoˈlulu]) is the capital and largest city of the U.S. state of Hawaii. It is an unincorporated part of and the county seat of the City and County of Honolulu along the southeast coast of the island of Oʻahu.[a] The city is the main gateway to Hawaiʻi and a major portal into the United States. The city is also a major hub for international business and military defense, as well as being host to a diverse variety of east–west and Pacific cultures, cuisine, and traditions.</p>
+        <a href="https://en.wikipedia.org/wiki/Honolulu" class="btn btn-outline-light offset-5 offset-md-0 my-4">Conoce mas!</a>
+      </div>
+    </div>
+  </div>
+</section>
+<!-- /Lugar y fecha -->
+
+<!-- conviertete en speaker -->
+<section id="conviertete-en-orador">
+  <div class="container">
+    <div class="row">
+      <div class="col text-uppercase text-center"">
+        <small>conviertete en un</small>
+        <h2>Orador</h2>
+      </div>
+    </div>
+    <div class="row">
+      <div class="col text-center">
+        Anonate como orador para dar una <abbr style="text-decoration: none;" data-toggle="tooltip" data-placement="bottom" title="charla de 5 minutos">charla ignite.</abbr>
+        Cuentanos de que quieres hablar!
+      </div>
+      
+    </div>
+    <div class="row">
+      <div class="col col-md-10 offset-md-1 col-lg-8 offset-lg-2 py-3">
+            <form>
+              <div class="form-row">
+                <div class="form-group col-12 col-md-6">
+                  <input type="text" class="form-control" placeholder="Nombre">
+                </div>
+                <div class="form-group col-12 col-md-6">
+                  <input type="text" class="form-control" placeholder="Apellido">
+                </div>
+              </div>
+              <div class="form-row">
+                <div class="col form-group">
+                  <textarea name="text" class="form-control form-control-ld" placeholder="Sobre que quieres hablar"></textarea>
+                  <small class="form-text text-muted">
+                    Recuerda incluir el titutlo de tu charla
+                  </small>
+                </div>
+              </div>
+              <div class="form-row">
+                <div class="col">
+                  <button type="button" class="btn btn-block btn-platzi">Enviar!</button>
+                </div>
+              </div>
+            </form>
+      </div>
+    </div>
+  </div>
+</section>
+<!-- /conviertete en speaker -->
+
 <!-- Footer -->
   <footer id="footer" class="py-4">
       <div class="container">
@@ -190,13 +254,48 @@
       </div>
   </footer>
   <!-- /Footer -->
-
+ 
+  <!-- Modal -->
+<div class="modal fade " id="exampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+  <div class="modal-dialog modal-dialog-centered">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title" id="exampleModalLabel">Comprar tickets</h5>
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+          <span aria-hidden="true">&times;</span>
+        </button>
+      </div>
+      <div class="modal-body">
+      <form>
+        <div class="form-row">
+          <div class="form-group col">
+            <div class="input-group mb-3">
+              <div class="input-group-prepend">
+                <span class="input-group-text" id="basic-addon1">@</span>
+              </div>
+              <input type="text" class="form-control" placeholder="Username" aria-label="Username" aria-describedby="basic-addon1">
+            </div>
+            <div class="alert alert-info" role="alert">
+              ingresa tu correo Electronico para proceder con el checkout
+            </div>
+          </div>
+        </div>
+      </form>
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-secondary" data-dismiss="modal">Cancelar</button>
+        <button type="button" class="btn btn-platzi">Comprar</button>
+      </div>
+    </div>
+  </div>
+</div>
+  <!-- /modal -->
 
     <!-- Optional JavaScript -->
     <!-- jQuery first, then Popper.js, then Bootstrap JS -->
     <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
     <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.min.js" integrity="sha384-OgVRvuATP1z7JjHLkuOU7Xw704+h835Lr+6QL9UvYjZE3Ipu6Tp75j7Bh/kR0JKI" crossorigin="anonymous"></script>
-    
+    <script src="index.js"></script>
   </body>
 </html>
